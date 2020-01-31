@@ -1,0 +1,183 @@
+@charset 'UTF-8';
+@import './reset.css';
+
+/* 전체 레이아웃 */
+body {background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin: 30px 0;
+}
+#header {}
+#main-nav {}
+#main-img {}
+#img-slider {}
+#img-desc {}
+#login {}
+#footer {}
+
+/* container, row 레이아웃 */
+.container {width: 1280px; margin: 0 auto;}
+.row {padding: 0 40px;}
+
+/* header 레이아웃 */
+.header {}
+.header h1 {
+    padding: 7px 0;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center; font-size: 2.2rem; color: white;
+}
+
+/* main-nav 레이아웃 */
+.main-nav {}
+.main-nav .menuBar {
+    display: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center; font-size: 1.2rem; color: white;
+}
+
+.main-nav ul {
+    display: flex;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.main-nav ul.active {display: flex;}
+
+.main-nav ul li.menu {flex: 3;}
+.main-nav ul li.social {flex: 1;}
+.main-nav ul li a {
+    display: block; height: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center; font-size: 0.9rem; color: white;
+
+    transition: all 0.5s ease;
+}
+.main-nav ul li a:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* main-img 레이아웃 */
+.main-img {}
+.main-img figure {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* img-slider 레이아웃 */
+.img-slider {}
+.img-slider ul {
+    display: flex;
+}
+.img-slider ul li {
+    display: flex;
+    flex-direction: column;
+}
+.img-slider ul li a {
+    display: block;
+    padding: 10px 5px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center; font-size: 0.8rem; color: white;
+
+    transition: all 0.5s ease;
+
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-slider ul li a:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+.img-slider ul .slide {flex:4}
+.img-slider ul .arrow {flex:1}
+
+
+/* img-desc 레이아웃 */
+.img-desc {}
+.img-desc p {
+    padding: 10px 130px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 1rem; color: white;
+}
+
+/* login */
+.login {}
+.login form {
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+.login form input {
+    padding: 3px 0;
+    border: 1px solid #222;
+}
+
+.login form .login-btn {
+    display: inline-block;
+    padding: 3px 15px;
+    vertical-align: -2px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 0.9rem; color: white;
+
+    transition: all 0.5s ease;
+}
+.login form .login-btn:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* footer 레이아웃 */
+.footer {}
+.footer address {
+    display: block;
+    padding: 10px 15px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center; color: white;
+}
+
+
+/* media Query */
+@media (max-width:1290px){
+    .container {width: 100%;}
+}
+
+@media (max-width:768px){
+    .row {padding: 0 60px;}
+    .main-nav ul {flex-wrap: wrap;}
+    .main-nav ul li.menu {
+        flex: 1;
+        flex-basis: 50%;
+    }
+    .main-nav ul li.social {flex: 1;}
+
+    .img-desc p {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width:500px){
+    #header {order: 2;}
+    #main-nav {order: 1;}
+    #main-img {order: 5;}
+    #img-slider {order: 6;}
+    #img-desc {order: 3;}
+    #login {order: 4;}
+    #footer {order: 7;}
+
+    .main-nav {margin-bottom: 20px;}
+
+    .main-nav ul li.menu {flex-basis: 100%;}
+    .main-nav .menuBar {display: block;}
+    .main-nav ul {
+        display: none;
+    }
+
+    .login form .login-btn {
+        display: block;
+        margin: 10px auto 0 auto;
+        width: 82%;
+    }
+}

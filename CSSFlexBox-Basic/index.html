@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/bc7f9e28ef.js" crossorigin="anonymous"></script>
+
+    <title>FlexBox Test</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header">
+                        <h1>What The Flexbox?!</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- main-nav -->
+        <nav id="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="main-nav mt20">
+                        <a href="#" class="menuBar"><i class="fas fa-bars"></i>  Menu</a>
+                        <ul>
+                            <li class="menu"><a href="#">Item01</a></li>
+                            <li class="menu"><a href="#">Item02</a></li>
+                            <li class="menu"><a href="#">Item03</a></li>
+                            <li class="menu"><a href="#">Item04</a></li>
+                            <li class="menu"><a href="#">Item05</a></li>
+                            <li class="menu"><a href="#">Item06</a></li>
+                            <li class="social"><a href="#"><span class="ir_so">Twitter</span><i class="fab fa-facebook-square fa-1x"></i></a></li>
+                            <li class="social"><a href="#"><span class="ir_so">FaceBook</span><i class="fab fa-twitter-square fa-1x"></i></a></li>
+                            <li class="social"><a href="#"><span class="ir_so">Github</span><i class="fab fa-github-square fa-1x"></i></a></li>
+                            <li class="social"><a href="#"><span class="ir_so">Instagram</span><i class="fab fa-instagram fa-1x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- //main-nav -->
+
+        <!-- main-img -->
+        <section id="main-img">
+            <div class="container">
+                <div class="row">
+                    <div class="main-img mt20">
+                        <figure>
+                            <img src="http://lorempixel.com/1000/600/abstract" alt="main-image">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //main-img -->
+
+        <!-- img-slider -->
+        <nav id="img-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="img-slider mt20">
+                        <ul>
+                            <li class="arrow"><a href="#">←</a></li>
+                            <li class="slide">
+                                <a href="#"><span>Add a CLI to Node Apps with Vantages</span></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#"><span>NewSprint, Spectacle</span></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#"><span>Small Modules: Tales from a Serial Module Author</span></a>
+                            </li>
+                            <li class="slide">
+                                <a href="#"><span>The End</span></a>
+                            </li>
+                            <li class="arrow"><a href="#">→</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- img-slider -->
+
+        <!-- img-desc -->
+        <section id="img-desc">
+            <div class="container">
+                <div class="row">
+                    <div class="img-desc mt20">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, eligendi molestiae? Blanditiis incidunt qui magnam doloremque eius! Provident, nulla ea?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //img-desc -->
+
+        <!-- login -->
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="login mt20">
+                        <form id="login">
+                            <fieldset>
+                                <legend class="ir_so">Sign In</legend>
+                                
+                                <label class="ir_so" for="uId">ID</label>
+                                <input type="text" id="uId" name="uId" placeholder="ID">
+                                
+                                <label class="ir_so" for="uPassword">Password</label>
+                                <input type="password" id="uPassword" name="uPassword" placeholder="Password">
+                                
+                                <label class="ir_so" for="login">login</label>
+                                <button class="login-btn" name="login">Login</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //login -->
+
+        <!-- footer -->
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer mt20">
+                        <address>CSS FlexBox &copy;MignonWeb 2020</address>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrapper -->
+
+    <!-- Javascript -->
+    <script>
+        document.getElementById('login').addEventListener('submit',function(e){e.preventDefault()});
+        document.querySelector('.main-nav .menuBar').addEventListener('click',function(event){
+            event.preventDefault();
+            document.querySelector('.main-nav ul').classList.toggle('active');
+        });
+    </script>
+    <!-- //Javascript -->
+</body>
+</html>
