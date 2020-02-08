@@ -5,8 +5,6 @@
     function scrollToWork(event){
         event.preventDefault();
 
-        console.log(workContainer.getBoundingClientRect().top);
-
         window.scroll({
             behavior: 'smooth',
             left: 0,

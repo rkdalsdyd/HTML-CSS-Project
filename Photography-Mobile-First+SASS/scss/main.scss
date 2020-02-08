@@ -8,7 +8,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.3),
+        -5px 5px 10px 3px rgba(0,0,0,0.3);
 }
 
 /*
@@ -31,12 +32,17 @@ body {
 }
 
 .header {        
+
     @include pc {
         display: grid;
         grid-template-columns: 2fr 3fr;
     }
 
     .header-title {
+        display: grid;
+        align-content: center;
+
+        height: 50vh;
         padding: 50px 10px;
         text-align: center; text-transform: uppercase;
 
@@ -47,6 +53,8 @@ body {
             font-size: 1.3rem; color: #888888;
         }
         .view-work {
+            justify-self: center;
+
             margin-top: 30px;
             padding: 5px 25px;
             border: 1px solid #a3a3a3;
@@ -61,18 +69,18 @@ body {
         }
 
         @include pc {
-            align-self: center;
+            height: 100vh;
         }
     }
 
     .header-image {
-        height: 250px;
+        height: 50vh;
         background-image: url(https://source.unsplash.com/De8wMYoSSBc);
         background-position: center center;
         background-size: cover;
 
         @include pc {
-            height: 500px;
+            height: 100vh;
         }
     }
 }

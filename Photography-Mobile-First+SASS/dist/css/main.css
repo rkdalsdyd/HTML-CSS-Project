@@ -6,8 +6,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   background-color: #fff;
-  -webkit-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3), -5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3), -5px 5px 10px 3px rgba(0, 0, 0, 0.3);
 }
 
 /*
@@ -30,6 +30,11 @@ body {
 }
 
 .header .header-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 50vh;
   padding: 50px 10px;
   text-align: center;
   text-transform: uppercase;
@@ -45,6 +50,8 @@ body {
 }
 
 .header .header-title .view-work {
+  -ms-grid-column-align: center;
+      justify-self: center;
   margin-top: 30px;
   padding: 5px 25px;
   border: 1px solid #a3a3a3;
@@ -61,14 +68,12 @@ body {
 
 @media (min-width: 500px) {
   .header .header-title {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    height: 100vh;
   }
 }
 
 .header .header-image {
-  height: 250px;
+  height: 50vh;
   background-image: url(https://source.unsplash.com/De8wMYoSSBc);
   background-position: center center;
   background-size: cover;
@@ -76,7 +81,7 @@ body {
 
 @media (min-width: 500px) {
   .header .header-image {
-    height: 500px;
+    height: 100vh;
   }
 }
 
