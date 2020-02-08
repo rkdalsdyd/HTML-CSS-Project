@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/bc7f9e28ef.js" crossorigin="anonymous"></script>
+
+    <title>Sliding Sign-in & Sign-up</title>
+</head>
+<body>
+    <main id="wrapper">
+        <h1 class="ir_so">Sign Form</h1>
+        <!-- sign-in-container -->
+        <section id="sign-in-container" class="sign-container">  
+            <!-- content -->
+            <article class="content">
+                <!-- sign-in -->
+                <h2>Sign in</h2>
+                <ul class="social">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                
+                <form id="sign-in-form" class="sign-form">
+                    <fieldset>
+                        <legend>or use your account</legend>
+                        <label for="userId" class="ir_so">User Email</label>
+                        <input type="text" name="userId" id="userId" placeholder="Email">
+                        <label for="userPW" class="ir_so">User Password</label>
+                        <input type="password" name="userPW" id="userPW" placeholder="Password">
+                    </fieldset>
+                </form>
+            
+                <a class="forgot" href="#">Forgot your password?</a>
+                <button type="button">SIGN IN</button>
+                <!-- //sign-in -->
+            </article>
+            <!-- //content -->
+        </section>
+        <!-- //sign-in-container -->
+
+        <!-- sign-up-container -->
+        <section id="sign-up-container" class="sign-container">  
+            <!-- content -->
+            <article class="content">
+                <!-- sign-up -->
+                <h2>Create Account</h2>
+                <ul class="social">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                
+                <form id="sign-up-form" class="sign-form">
+                    <fieldset>
+                        <legend>or use your email for registration</legend>
+                        <label for="userName" class="ir_so">User Name</label>
+                        <input type="text" name="userName" id="userName" placeholder="Name">
+                        <label for="userNewId" class="ir_so">User Email</label>
+                        <input type="text" name="userNewId" id="userNewId" placeholder="Email">
+                        <label for="userNewPW" class="ir_so">User Password</label>
+                        <input type="password" name="userNewPW" id="userNewPW" placeholder="Password">
+                    </fieldset>
+                </form>
+            
+                <button type="button">SIGN UP</button>
+                <!-- //sign-up -->
+            </article>
+            <!-- //content -->
+        </section>
+        <!-- //sign-up-container -->
+
+        <!-- overlay-container -->
+        <section id="overlay-container">
+            <!-- overlay -->
+            <div class="overlay">
+                <!-- overlay-left -->
+                <article class="overlay-panel overlay-left">
+                    <h2>Welcome Back!</h2>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button type="button">SIGN IN</button>
+                </article>
+                <!-- //overlay-left -->
+
+                <!-- overlay-right -->
+                <article class="overlay-panel overlay-right">
+                    <h2>Hello, Friend!</h2>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button type="button">SIGN UP</button>
+                </article>
+                <!-- //overlay-right -->
+            </div>
+            <!-- //overlay -->
+        </section>
+        <!-- //overlay-container -->
+    </main>
+
+    <script src="./js/sliding.js"></script>
+</body>
+</html>

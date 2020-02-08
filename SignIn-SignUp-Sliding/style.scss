@@ -1,0 +1,135 @@
+@import url(./reset.css);
+
+body {
+    background-color: #f6f5f7;
+    width: 100vw; height: 100vh;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#wrapper {
+    background-color: #fff;
+    box-shadow: 5px 7px 10px 3px rgba(0,0,0,0.3),
+                -5px 7px 10px 3px rgba(0,0,0,0.3);
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.sign-container {
+    flex: 1;
+
+    .content {
+        width: 40vw; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 45vh;
+        padding: 50px 30px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem; font-weight: 800;
+        }
+
+        .social {
+            display: inline-grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 10px;
+
+            align-self: center;
+
+            li {    
+                border: 1px solid #cdcdcd;
+                border-radius: 50%;
+            }
+            a {
+                display: block;
+                width: 33px; height: 33px;
+                line-height: 33px;
+            }
+        }
+
+        .sign-form {
+            input {
+                display: block;
+                width: 100%; height: 30px; padding-left: 10px;
+                margin-top: 15px;
+                background-color: #dddddd;
+                border: 0;
+                border-radius: 5px;
+            }
+        }
+    
+        .forgot {
+            display: block;
+        }
+
+        button {
+            align-self: center;
+
+            display: inline-block;
+            padding: 10px 40px;
+            background-color: #ff4b2b;
+            border-radius: 20px;
+            font-weight: 800; color: white;
+            
+            transition: transform 0.8s ease;
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}
+
+#overlay-container {
+    .overlay{
+        .overlay-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            height: 45vh;
+            padding: 60px 30px;
+            background: linear-gradient(to right, #FF4B2B, #FF416C);
+            text-align: center;
+
+            display: none;
+
+            h2 {
+                font-size: 2rem; font-weight: 800;
+                color: white;
+            }
+            p {
+                padding: 20px 0;
+                color: white;
+            }
+            button {
+                align-self: center;
+
+                display: inline-block;
+                padding: 10px 40px;
+                background-color: #ff4b2b;
+                border: 1px solid white;
+                border-radius: 20px;
+                font-weight: 800; color: white;
+
+                transition: transform 80ms ease-in;
+    
+                &:active {
+                    transform: scale(0.95);
+                }
+                &:focus {
+                    outline: none;
+                }
+                
+            }
+        }
+    }
+}
